@@ -1,8 +1,8 @@
 
 ## Dati Admin
-user:admin
+username: admin
 
-pass:111111
+pass: 111111
 
 # Progettofinaleepicode
 
