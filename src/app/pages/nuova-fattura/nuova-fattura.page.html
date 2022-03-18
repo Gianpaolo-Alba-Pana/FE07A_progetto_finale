@@ -1,4 +1,4 @@
-<div class="container text-center p-5 mt-5 rounded">
+<div class="container mt-5 rounded">
     <div class="row justify-content-center">
       <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
         {{errorMessage}}
@@ -32,7 +32,7 @@
           </select>
         </div>
 
-        <button class="btn btn-primary mt-3" [disabled]="form.invalid" [disabled]="isLoading" type="submit">
+        <button class="btn btn-success mt-3" [disabled]="form.invalid" [disabled]="isLoading" type="submit">
           Inserisci Nuova Fattura
           <span *ngIf="isLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
         </button>

@@ -49,18 +49,5 @@ export class FattureClientePage implements OnInit {
     this.fatSrv.removeFattura(fattura).subscribe(response => {this.onGetFattureCliente(this.id)})
   }
 
-  filtra() {
-    this.booleanoFiltro = true;
-    this.isLoading = true;
-    const filtro = (<HTMLInputElement>document.getElementById('filtro')).value;
-    const valoreFiltro = (<HTMLInputElement>document.getElementById('valore'))
-      .value;
 
-    this.fatSrv
-      .getFattureFiltrate(filtro, valoreFiltro, this.pagina)
-      .subscribe((res) => {
-          this.fatture = res.content;
-          this.isLoading = false;
-      });
-  }
 }

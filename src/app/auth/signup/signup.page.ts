@@ -14,7 +14,7 @@ export class SignupPage implements OnInit {
 
   ngOnInit(): void {}
 
-  //REGISTRAZIONE: se al submit del form è tutto ok vai a funzione signup e mostra login page, altrimenti stampa errore in console.
+
   async onsubmit(form: NgForm) {
     this.isLoading = true;
     console.log(form.value);

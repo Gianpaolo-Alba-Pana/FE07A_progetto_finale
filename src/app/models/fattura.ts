@@ -9,6 +9,6 @@ export interface Fattura {
     id: number;
     nome: string;
   };
-  // stato: string;
+
   cliente: Cliente;
 }

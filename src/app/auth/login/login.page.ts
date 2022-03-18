@@ -13,7 +13,7 @@ export class LoginPage implements OnInit {
 
   ngOnInit(): void {}
 
-  //AUTENTICAZIONE: se al submit del form è tutto ok vai a funzione login e mostra utenti page, altrimenti stampa errore in console.
+
   async onSubmit(form: any) {
     try {
       await this.authSrv.login(form.value).toPromise();

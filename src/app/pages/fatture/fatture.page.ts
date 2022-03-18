@@ -24,14 +24,6 @@ export class FatturePage implements OnInit {
     });
   }
 
-  // cambiaPagina(param: string) {
-  //   if (param == '+') {
-  //     this.pagina++;
-  //   } else if (param == '-') {
-  //     this.pagina--;
-  //   }
-  //   this.getFatture();
-  // }
 
   cambiaPagina(param: string) {
     if (param == '+') {
@@ -47,25 +39,4 @@ export class FatturePage implements OnInit {
     this.fatSrv.removeFattura(fattura).subscribe(response => {this.onGetAllFatture()})
   }
 
-  filtra() {
-    this.booleanoFiltro = true;
-    this.isLoading = true;
-    const filtro = (<HTMLInputElement>document.getElementById('filtro')).value;
-    const valoreFiltro = (<HTMLInputElement>document.getElementById('valore'))
-      .value;
-
-    this.fatSrv
-      .getFattureFiltrate(filtro, valoreFiltro, this.pagina)
-      .subscribe((res) => {
-        if (filtro == 'id') {
-          this.fatture=[];
-          this.fatture.push(res);
-          console.log(res);
-          this.isLoading = false;
-        } else {
-          this.fatture = res.content;
-          this.isLoading = false;
-        }
-      });
-  }
 }

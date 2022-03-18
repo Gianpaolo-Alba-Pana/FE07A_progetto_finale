@@ -1,5 +1,4 @@
-<div class="container text-center p-5 mt-5 rounded">
-  <!-- <ng-container *ngIf="fattura.cliente ==  cliente; else unauthorizedTemplate"> -->
+<div class="container mt-5 rounded">
   <div class="row justify-content-center">
     <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
       {{errorMessage}}
@@ -220,7 +219,7 @@
         <option *ngFor="let provincia of province" value="{{provincia.nome}}">{{provincia.nome}}</option>
       </select>
     </div>
-      <button class="btn btn-primary mt-3" [disabled]="form.invalid" [disabled]="isLoading" type="submit">
+      <button class="btn btn-success mt-3" [disabled]="form.invalid" [disabled]="isLoading" type="submit">
         Modifica Cliente
         <span
           *ngIf="isLoading"
@@ -231,9 +230,5 @@
       </button>
     </form>
   </div>
-  <!-- </ng-container> -->
 </div>
-<!--
-<ng-template #unauthorizedTemplate>
-  <h1 class="text-center mt-5">ATTENZIONE: NON SEI AUTORIZZATO A VISUALIZZARE QUESTO CLIENTE!</h1>
-</ng-template> -->
+
